@@ -1,7 +1,6 @@
 # Global Social
 
-![Github license](https://img.shields.io/static/v1?label=License&message=MIT&color=brightgreen)
-
+![License: MIT](https://img.shields.io/badge/License-MIT-informational.svg)
 ## Description
 
 Global Social is a full-stack application where
