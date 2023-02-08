@@ -1,13 +1,18 @@
 # Global Social
 
 ![License: MIT](https://img.shields.io/badge/License-MIT-informational.svg)
+
 ## Description
 
-Global Social is a full-stack application where
+Global Social is a full-stack API social network web application, so users can share their thoughts, react to friends’ thoughts, and create a friend list.
+
+This app uses `Express.js` for routing, `MongoDB` database, and the `Mongoose ODM`.
+After creating an API, a tailor-made database was built using Insomnia.
 
 ## Table of Contents
 
 - [Installation](#installation)
+- [UserStory](#user-story)
 - [Usage](#usage)
 - [Credits](#credits)
 - [License](#license)
@@ -15,28 +20,45 @@ Global Social is a full-stack application where
 
 ## Installation
 
-Follow the prompts.
+- [Walkthrough video]()
+
+## User Story
+
+```
+AS A social media startup
+I WANT an API for my social network that uses a NoSQL database
+SO THAT my website can handle large amounts of unstructured data
+```
 
 ## Usage
 
-- Click on the `login` button on the homepage to sign up for a new profile, or login to your exisiting profile.
+The following animations show examples of the application's API routes being tested in Insomnia.
 
-- When you're directed to the Profile page you'll be able to add your opportunity's information. Make sure you add all the information needed, including the image, to create the volunteering opportunity
+The following animation shows GET routes to return all users and all thoughts being tested in Insomnia:
 
-- Your opportunity will be displayed on the right side of your profile page.
+![Demo of GET routes to return all users and all thoughts being tested in Insomnia.](./assets/images/18-nosql-homework-demo-01.gif)
 
-- Click on the opportunity to view its details.
+The following animation shows GET routes to return a single user and a single thought being tested in Insomnia:
 
-- Add a comment to the opportunity or click the `sign me up` button to take part of the opportunity.
+![Demo that shows GET routes to return a single user and a single thought being tested in Insomnia.](./assets/images/18-nosql-homework-demo-02.gif18-nosql-homework-demo-02.gif)
+
+The following animation shows the POST, PUT, and DELETE routes for users being tested in Insomnia:
+
+![Demo that shows the POST, PUT, and DELETE routes for users being tested in Insomnia.](./assets/images/18-nosql-homework-demo-03.gif)
+
+In addition to this, your walkthrough video should show the POST, PUT, and DELETE routes for thoughts being tested in Insomnia.
+
+The following animation shows the POST and DELETE routes for a user’s friend list being tested in Insomnia:
+
+![Demo that shows the POST and DELETE routes for a user’s friend list being tested in Insomnia.](./assets/images/18-nosql-homework-demo-04.gif)
+
+In addition to this, your walkthrough video should show the POST and DELETE routes for reactions to thoughts being tested in Insomnia.
 
 ## Credits
 
-- [Bootstrap](https://getbootstrap.com/)
-- [Google Fonts](https://fonts.google.com/about)
-- [Heroku](https://dashboard.heroku.com/)
-- [My SQL Workbench](https://www.mysql.com/products/workbench/)
-- [UCLA Extension Bootcamp](https://www.uclaextension.edu/?gclid=Cj0KCQiAgribBhDkARIsAASA5btdbwAz8x25r3b1deoRNIGxfkPFL11rAQMuCgQ7HYiqBH8CLr9CgLoaAktlEALw_wcB&gclsrc=aw.ds)
+- [Insomnia](https://insomnia.rest/)
 - [MongoDB](https://www.mongodb.com/try/download/compass)
+- [UCLA Extension Bootcamp](https://www.uclaextension.edu/?gclid=Cj0KCQiAgribBhDkARIsAASA5btdbwAz8x25r3b1deoRNIGxfkPFL11rAQMuCgQ7HYiqBH8CLr9CgLoaAktlEALw_wcB&gclsrc=aw.ds)
 
 ## License
 
