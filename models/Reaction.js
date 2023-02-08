@@ -24,15 +24,4 @@ const reactionSchema = new Schema({
   },
 })
 
-// Create a virtual property `geReaction` that gets the amount of reactions
-reactionSchema
-  .virtual('getReaction')
-  // Getter
-  .get(function () {
-    return this.reactions.length
-  })
-
-// Initialize our Reaction model
-const Reaction = model('reaction', reactionSchema)
-
-module.exports = Reaction
+module.exports = reactionSchema

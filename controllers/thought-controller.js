@@ -4,17 +4,18 @@ module.exports = {
   // Function to get all of the thoughts by invoking the find() method with no arguments.
   // Then we return the results as JSON, and catch any errors. Errors are sent as JSON with a message and a 500 status code
   getThoughts(req, res) {
-    Thought.find()
+    Thought.find({})
       .then((thoughts) => res.json(thoughts))
       .catch((err) => res.status(500).json(err))
   },
+
   // Gets a single thought using the findOneAndUpdate method. We pass in the ID of the thought and then respond with it, or an error if not found
   getSingleThought(req, res) {
     Thought.findOne({ _id: req.params.thoughtId })
-      .then((thought) =>
+      .then((thoughts) =>
         !thought
           ? res.status(404).json({ message: 'No thought with that ID' })
-          : res.json(thought),
+          : res.json(thoughts),
       )
       .catch((err) => res.status(500).json(err))
   },
@@ -22,7 +23,7 @@ module.exports = {
   // Because thoughts are associated with Users, we then update the User who created the app and add the ID of the thought to the thoughts array
   createThought(req, res) {
     Thought.create(req.body)
-      .then((thought) => {
+      .then((thoughts) => {
         return User.findOneAndUpdate(
           { _id: req.body.userId },
           // could use $push - add to set prevents duplicates
@@ -49,10 +50,10 @@ module.exports = {
       { $set: req.body },
       { runValidators: true, new: true },
     )
-      .then((thought) =>
-        !thought
+      .then((thoughts) =>
+        !thoughts
           ? res.status(404).json({ message: 'No thought with this id!' })
-          : res.json(thought),
+          : res.json(thoughts),
       )
       .catch((err) => {
         console.log(err)
@@ -63,8 +64,8 @@ module.exports = {
   // Then if the thought exists, we look for any users associated with the thought based on he thought ID and update the thought array for the User.
   deleteThought(req, res) {
     Thought.findOneAndRemove({ _id: req.params.thoughtId })
-      .then((thought) =>
-        !thought
+      .then((thoughts) =>
+        !thoughts
           ? res.status(404).json({ message: 'No thought with this id!' })
           : User.findOneAndUpdate(
               { thoughts: req.params.thoughtId },
