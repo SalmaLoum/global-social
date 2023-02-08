@@ -32,23 +32,9 @@ SO THAT my website can handle large amounts of unstructured data
 
 ## Usage
 
-The following animations show examples of the application's API routes being tested in Insomnia.
+The following animations show examples of the application's API routes being tested in Insomnia:
 
-The following animation shows GET routes to return all users and all thoughts being tested in Insomnia:
-
-![Demo of GET routes to return all users and all thoughts being tested in Insomnia.](./assets/images/18-nosql-homework-demo-01.gif)
-
-The following animation shows GET routes to return a single user and a single thought being tested in Insomnia:
-
-![Demo that shows GET routes to return a single user and a single thought being tested in Insomnia.](./assets/images/18-nosql-homework-demo-02.gif18-nosql-homework-demo-02.gif)
-
-The following animation shows the POST, PUT, and DELETE routes for users being tested in Insomnia:
-
-![Demo that shows the POST, PUT, and DELETE routes for users being tested in Insomnia.](./assets/images/18-nosql-homework-demo-03.gif)
-
-The following animation shows the POST and DELETE routes for a user’s friend list being tested in Insomnia:
-
-![Demo that shows the POST and DELETE routes for a user’s friend list being tested in Insomnia.](./assets/images/18-nosql-homework-demo-04.gif)
+![Global Social app demo](./assets/images/global-social.gif)
 
 ## Credits
 
