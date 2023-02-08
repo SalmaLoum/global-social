@@ -1,6 +1,6 @@
 const { Schema, model } = require('mongoose')
 const reactionSchema = require('./Reaction')
-const dateFormat = require('../utils/dateFormat')
+// const dateFormat = require('../utils/dateFormat')
 
 // Schema to create Post model
 const thoughtSchema = new Schema(
@@ -19,7 +19,7 @@ const thoughtSchema = new Schema(
       type: String,
       required: true,
     },
-    reations: [reactionSchema],
+    reactions: [reactionSchema],
   },
   {
     toJSON: {
@@ -31,10 +31,10 @@ const thoughtSchema = new Schema(
 
 // Create a virtual property `getThoughts` that gets the amount of thoughts
 thoughtSchema
-  .virtual('getThoughts')
+  .virtual('reactionCount')
   // Getter
   .get(function () {
-    return this.thought.length
+    return this.reactions.length
   })
 
 // Initialize our Thought model

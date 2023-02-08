@@ -6,7 +6,10 @@ module.exports = {
   getThoughts(req, res) {
     Thought.find()
       .then((thoughts) => res.json(thoughts))
-      .catch((err) => res.status(500).json(err))
+      .catch((err) => {
+        console.log(err)
+        res.status(500).json(err)
+      })
   },
 
   // Gets a single thought using the findOneAndUpdate method. We pass in the ID of the thought and then respond with it, or an error if not found
