@@ -16,5 +16,4 @@ router
   .get(getSingleThought)
   .put(updateThought)
   .delete(deleteThought)
-
 module.exports = router
