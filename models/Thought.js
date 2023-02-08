@@ -29,15 +29,15 @@ const thoughtSchema = new Schema(
   },
 )
 
-// Create a virtual property `getTags` that gets the amount of tags associated with an application
+// Create a virtual property `getThoughts` that gets the amount of thoughts
 thoughtSchema
-  .virtual('getResponses')
+  .virtual('getThoughts')
   // Getter
   .get(function () {
-    return this.tags.length
+    return this.thought.length
   })
 
-// Initialize our Application model
+// Initialize our Thought model
 const Thought = model('thought', thoughtSchema)
 
 module.exports = Thought
