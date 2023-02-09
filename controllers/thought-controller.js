@@ -46,7 +46,8 @@ module.exports = {
         res.status(500).json(err)
       })
   },
-  // Updates a thought using the findOneAndUpdate method. Uses the ID, and the $set operator in mongodb to inject the request body. Enforces validation.
+  // Updates a thought using the findOneAndUpdate method.
+  //Uses ID, and the $set operator in mongodb to inject the request body. Enforces validation.
   updateThought(req, res) {
     Thought.findOneAndUpdate(
       { _id: req.params.thoughtId },
@@ -63,8 +64,8 @@ module.exports = {
         res.status(500).json(err)
       })
   },
-  // Deletes a thought from the database. Looks for an app by ID.
-  // Then if the thought exists, we look for any users associated with the thought based on he thought ID and update the thought array for the User.
+  // Removes a thought from the database. This method finds the thought based on ID.
+  // It updates the thought array for the User.
   deleteThought(req, res) {
     Thought.findOneAndRemove({ _id: req.params.thoughtId })
       .then((thought) =>

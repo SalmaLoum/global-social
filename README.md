@@ -20,7 +20,7 @@ After creating an API, a tailor-made database was built using Insomnia.
 
 ## Installation
 
-- [Walkthrough video]()
+- [Walkthrough video](https://drive.google.com/file/d/1JlAiD3A1D3PEiaVP5InrYvKoUaECk2uN/view?usp=share_link)
 
 ## User Story
 
